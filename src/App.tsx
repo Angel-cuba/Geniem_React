@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
+import { Reader } from './api/request';
 import './App.css';
+import List from './components/List';
+import { IList } from './interfaces/interfaces';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [list, setList] = useState<IList[]>([]);
+	console.log(list);
+	const ReadList = () => {
+		try {
+			Reader()
+				.then((response) => response.json())
+				.then((data) => {
+					setList(data);
+				});
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	useEffect(() => {
+		ReadList();
+	}, []);
+	return (
+		<div className="App">
+			<h1>React app!</h1>
+			<List list={list} />
+		</div>
+	);
 }
 
 export default App;
