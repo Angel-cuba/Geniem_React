@@ -5,7 +5,3 @@ export interface IList {
 	url: string;
 	thumbnailUrl: string;
 }
-
-export interface ReadAll {
-	ReadList: (list: IList) => void;
-}
