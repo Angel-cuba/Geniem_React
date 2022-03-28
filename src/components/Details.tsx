@@ -29,7 +29,10 @@ const Details = () => {
 						This picture is available on the album{' '}
 						<span className={styles.spanDetails}>{itemId.albumId}</span>
 					</p>
-					<img src={itemId.url} alt={`Pic with id ${itemId.id}`} />
+					<p className={styles.paragraphDetailsText}>
+						{itemId.title[0].toUpperCase() + itemId.title.slice(1, -1)}.
+					</p>
+					<img className={styles.imgDetails} src={itemId.url} alt={`Pic with id ${itemId.id}`} />
 				</div>
 			)}
 			<Link className={styles.detailsLink} to="/">

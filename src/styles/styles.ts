@@ -37,7 +37,7 @@ export const useStyles = makeStyles({
 		borderRadius: '5px',
 		marginTop: '1rem',
 	},
-	//Deatils.tsx
+	//Details.tsx
 	details: {
 		width: '100vw',
 		height: '100vh',
@@ -56,21 +56,39 @@ export const useStyles = makeStyles({
 		borderRadius: '5px',
 		textDecoration: 'none',
 		padding: '1rem',
-		color: 'white',
+		color: 'rgba(0, 0, 0, 0.481)',
 		fontWeight: 'bold',
+		'&:hover': {
+			backgroundColor: '#e6e6e6',
+			color: '#000',
+			boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.12)',
+		},
 	},
 	contentDetails: {
 		padding: '1rem',
 		backgroundColor: '#d3d3d3',
+		borderRadius: '8px',
 	},
 	paragraphDetails: {
-		fontSize: '1.5rem',
+		fontSize: '1.1rem',
 		fontWeight: 'bold',
-		color: '#fff',
 		textAlign: 'center',
+	},
+	paragraphDetailsText: {
+		textAlign: 'center',
+		fontSize: '1.5rem',
+		color: 'whitesmooke',
+		fontWeight: 'bold',
+		padding: '1rem',
+		border: '1px solid rgba(0, 0, 0, 0.12)',
+		backgroundColor: 'rgba(0, 0, 0, 0.052)',
+		borderRadius: '5px',
 	},
 	spanDetails: {
 		fontSize: '2rem',
 		color: 'crimson',
+	},
+	imgDetails: {
+		borderRadius: '8px',
 	},
 });
