@@ -6,5 +6,12 @@ interface Props {
 
 export default function Item({ l }: Props) {
 	const styles = useStyles();
-	return <div className={styles.singleItem}>{l.title}</div>;
+	return (
+		<div className={styles.singleItem}>
+			{l.title}
+			<button className={styles.button} onClick={() => console.log(l.id)}>
+				Details
+			</button>
+		</div>
+	);
 }
