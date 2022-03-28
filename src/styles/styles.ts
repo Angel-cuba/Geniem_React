@@ -22,7 +22,7 @@ export const useStyles = makeStyles({
 		bottom: '1rem',
 		right: '1rem',
 		borderRadius: '5px',
-		border: 'none',
+		textDecoration: 'none',
 		backgroundColor: 'silver',
 		color: 'black',
 		padding: '0.62rem',

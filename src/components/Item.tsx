@@ -1,5 +1,6 @@
 import { IList } from '../interfaces/interfaces';
 import { useStyles } from '../styles/styles';
+import { Link } from 'react-router-dom';
 interface Props {
 	l: IList;
 }
@@ -9,9 +10,9 @@ export default function Item({ l }: Props) {
 	return (
 		<div className={styles.singleItem}>
 			{l.title}
-			<button className={styles.button} onClick={() => console.log(l.id)}>
+			<Link className={styles.button} to={`/${l.id}`}>
 				Details
-			</button>
+			</Link>
 		</div>
 	);
 }
