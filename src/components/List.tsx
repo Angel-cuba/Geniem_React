@@ -15,7 +15,7 @@ export default function List({ list }: Props) {
 			) : (
 				<div className={styles.content}>
 					{list.map((l, index: number) => (
-						<Item key={index} l={l} />
+						<Item key={index} LItem={l} />
 					))}
 				</div>
 			)}

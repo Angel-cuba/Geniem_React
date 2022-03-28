@@ -24,7 +24,7 @@ const Home = () => {
 	return (
 		<div className="App">
 			<h1>React app!</h1>
-			<List list={list} />
+			{!list ? 'Loading...' : <List list={list} />}
 		</div>
 	);
 };
