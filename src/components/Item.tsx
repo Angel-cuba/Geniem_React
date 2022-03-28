@@ -2,15 +2,16 @@ import { IList } from '../interfaces/interfaces';
 import { useStyles } from '../styles/styles';
 import { Link } from 'react-router-dom';
 interface Props {
-	l: IList;
+	LItem: IList;
 }
 
-export default function Item({ l }: Props) {
+export default function Item({ LItem }: Props) {
 	const styles = useStyles();
 	return (
 		<div className={styles.singleItem}>
-			{l.title}
-			<Link className={styles.button} to={`/${l.id}`}>
+			{LItem.id}
+			<img className={styles.singleItemImg} src={LItem.thumbnailUrl} alt="" />
+			<Link className={styles.button} to={`/${LItem.id}`}>
 				Details
 			</Link>
 		</div>
