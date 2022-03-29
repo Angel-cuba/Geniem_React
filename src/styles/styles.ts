@@ -68,6 +68,9 @@ export const useStyles = makeStyles({
 		padding: '1rem',
 		backgroundColor: '#d3d3d3',
 		borderRadius: '8px',
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'center',
 	},
 	paragraphDetails: {
 		fontSize: '1.1rem',
@@ -90,5 +93,6 @@ export const useStyles = makeStyles({
 	},
 	imgDetails: {
 		borderRadius: '8px',
+		margin: 'auto',
 	},
 });
