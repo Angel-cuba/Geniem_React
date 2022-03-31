@@ -22,8 +22,8 @@ li {
 	padding: 1rem;
 	border: 1px solid silver;
 	border-radius: 5px;
-	margin: 0 0.14rem;
-	background-color: rgba(0, 0, 0, 0.5);
+	margin: 0.1rem 0.14rem;
+	background-color: rgba(0, 0, 0, 0.15);
 	cursor: pointer;
 }
 .active {
