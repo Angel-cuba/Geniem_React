@@ -8,7 +8,6 @@ const Details = () => {
 	const { id } = useParams();
 	const styles = useStyles();
 	const [itemId, setItemId] = useState<IList>();
-	console.log(itemId);
 
 	useEffect(() => {
 		ReaderById(id)
